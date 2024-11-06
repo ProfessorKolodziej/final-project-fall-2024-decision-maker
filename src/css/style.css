@@ -1,16 +1,4 @@
 /*
-CSS controls the styling of the page.
-You can write a color in directly, or use variables.
-Try changing the color from blue to red in the
-primary color variable below.
-*/
-
-:root {
-	--color-primary: blue;
-	--color-secondary: #c00;
-}
-
-/*
 CSS doesn't allow variables to be used in media
 queries just yet, but you can use these values
 to help you out.
@@ -22,14 +10,45 @@ to help you out.
 	--size-xl: 1200px;
 */
 
-h1 {
-	color: var(--color-primary);
-}
 
-/* This uses the same value as --size-xs. */
-@media screen and (width >= 320px) {
+
+/* This uses the same value as --size-xs.
+@media screen and (width >=320px) {
 	.content-container {
 		margin: 0 auto;
-		max-width: 768px;
+		max-width: 1024px;
 	}
 }
+*/
+
+.content-container {
+	width: 100%;
+	max-width: 1024px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto auto;
+	gap: 20px;
+	margin: 40px auto 0;
+}
+
+.ButtonEntertainment {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	color: white;
+	padding: 0px;
+	border-radius: 15px;
+	text-align: center;
+	font-weight: bold;
+	background-color: #F4811E;
+	width: 280px;
+	height: 280px;
+	grid-row: 1;
+	grid-column: 1;
+}
+
+
+
+.DMheadline {}
