@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Moul&display=swap');
+
+
 /*
 CSS doesn't allow variables to be used in media
 queries just yet, but you can use these values
@@ -12,14 +15,65 @@ to help you out.
 
 
 
-/* This uses the same value as --size-xs.
+/* This uses the same value as --size-xs.*/
+
+
 @media screen and (width >=320px) {
-	.content-container {
+	.welcome-body {
+		font-family: "Moul", serif;
+		background-color: #FDF3DD;
+		margin: 0;
+		padding: 0;
+		color: #F18018;
+	}
+
+
+	.welcome-content-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 0;
+		max-width: 800px;
 		margin: 0 auto;
-		max-width: 1024px;
+	}
+
+	.welcome-title {
+		font-size: 8vw;
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+
+	.welcome-background-pic {
+		margin-bottom: 30px;
+		width: 60vw;
+		height: auto;
+	}
+
+
+
+}
+
+
+
+
+
+
+/*
+
+@media screen and (width >=500px) {
+	#some-id {
+		color: red;
 	}
 }
-*/
+
+
+
+
+
+
+
 
 .content-container {
 	width: 100%;
