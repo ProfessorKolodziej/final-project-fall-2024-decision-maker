@@ -40,7 +40,7 @@ to help you out.
 	}
 
 	.welcome-title {
-		font-size: 8vw;
+		font-size: 9vw;
 		font-weight: bold;
 		margin-bottom: 20px;
 	}
@@ -51,6 +51,35 @@ to help you out.
 		height: auto;
 	}
 
+	.welcome-subtitle {
+		font-size: 6vw;
+		text-align: left;
+	}
+
+	.welcome-para {
+		font-size: 4vw;
+		width: 60vw;
+		text-align: left;
+	}
+
+	.welcome-Start-button {
+		display: inline-block;
+		background-color: #CF4437;
+		color: white;
+		padding: 10px 28px;
+		border-radius: 40px;
+		font-size: 4vw;
+		transition: background-color 0.3s ease;
+		text-decoration: none;
+		margin-bottom: 40px;
+		margin-right: auto;
+		margin-left: 18vw;
+		margin-top: 20px;
+	}
+
+	.welcome-Start-button:hover {
+		background-color: #c13319;
+	}
 
 
 }
@@ -62,7 +91,7 @@ to help you out.
 
 /*
 
-@media screen and (width >=500px) {
+@media screen and (width >=768px) {
 	#some-id {
 		color: red;
 	}
