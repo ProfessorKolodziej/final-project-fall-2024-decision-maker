@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Moul&display=swap');
+
+
+
+@media screen and (min-width: 320px) {
+	.function-body {
+		font-family: "Moul", serif;
+		background-color: #FDF3DD;
+		margin: 0;
+		padding: 0;
+	}
+
+
+	.function-content-container {
+		color: #4F4F4F;
+		font-family: "Moul", serif;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto;
+		gap: 5vw;
+		margin-left: 5vw;
+		margin-top: 5vw;
+	}
+
+	.ButtonEntertainment {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 40vw;
+		height: 45vw;
+		background-color: #F18018;
+		border-radius: 15px;
+		text-decoration: none;
+		color: white;
+		text-align: center;
+		gap: 10px;
+		transition: transform 0.3s ease;
+	}
+
+	.ButtonEntertainment:hover {
+		transform: scale(1.05);
+	}
+
+	.ButtonEntertainment img,
+	.ButtonFood img,
+	.ButtonBook img {
+		width: 20vw;
+		object-fit: contain;
+	}
+
+	.ButtonFood {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 40vw;
+		height: 45vw;
+		background-color: #EF601E;
+		border-radius: 15px;
+		text-decoration: none;
+		color: white;
+		text-align: center;
+		gap: 10px;
+		transition: transform 0.3s ease;
+	}
+
+	.ButtonFood:hover {
+		transform: scale(1.05);
+	}
+
+	.ButtonBook {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 40vw;
+		height: 45vw;
+		background-color: #FFAB49;
+		border-radius: 15px;
+		text-decoration: none;
+		color: white;
+		text-align: center;
+		gap: 10px;
+		transition: transform 0.3s ease;
+	}
+
+	.ButtonBook:hover {
+		transform: scale(1.05);
+	}
+
+	.ButtonAbout {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 30vw;
+		height: 32vw;
+		background-color: #FDEC90;
+		border-radius: 15px;
+		text-decoration: none;
+		color: #EF601E;
+		text-align: center;
+		gap: 10px;
+		transition: transform 0.3s ease;
+	}
+
+	.ButtonAbout:hover {
+		transform: scale(1.05);
+	}
+
+	.ButtonWelcome {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 30vw;
+		height: 32vw;
+		background-color: #FFD0A4;
+		border-radius: 15px;
+		text-decoration: none;
+		color: #EF601E;
+		text-align: center;
+		gap: 10px;
+		transition: transform 0.3s ease;
+		margin-left: -10vw;
+	}
+
+	.ButtonWelcome:hover {
+		transform: scale(1.05);
+	}
+
+	.ButtonAbout img,
+	.ButtonWelcome img {
+		width: 15vw;
+		object-fit: contain;
+	}
+
+	.DMheadline {
+		font-size: 8vw;
+	}
+
+
+}
+
+@media screen and (min-width: 768px) {
+
+	.function-body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.function-content-container {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto auto;
+		gap: 3vw 0;
+		grid-template-columns: 25vw 25vw 25vw;
+		margin-top: 2vw;
+
+	}
+
+	.ButtonEntertainment,
+	.ButtonFood,
+	.ButtonBook {
+		width: 20vw;
+		height: 23vw;
+		font-size: 2vw;
+	}
+
+	.ButtonEntertainment img,
+	.ButtonFood img,
+	.ButtonBook img {
+		width: 8vw;
+	}
+
+	.ButtonAbout,
+	.ButtonWelcome {
+		width: 15vw;
+		height: 17vw;
+		font-size: 1.5vw;
+	}
+
+	.ButtonAbout img,
+	.ButtonWelcome img {
+		width: 5vw;
+	}
+
+	.DMheadline {
+		font-size: 4vw;
+		margin-left: 5vw;
+
+	}
+
+	.ButtonWelcome {
+		margin-left: 5vw;
+	}
+
+	.ButtonAbout {
+		margin-right: -2vw;
+		justify-self: end;
+	}
+
+}

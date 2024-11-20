@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Moul&display=swap');
+
+
+/*
+CSS doesn't allow variables to be used in media
+queries just yet, but you can use these values
+to help you out.
+
+	--size-xs: 320px;
+	--size-sm: 480px;
+	--size-md: 768px;
+	--size-lg: 1024px;
+	--size-xl: 1200px;
+*/
+
+
+
+/* This uses the same value as --size-xs.*/
+
+
+@media screen and (min-width: 320px) {
+
+	.welcome-body {
+		font-family: "Moul", serif;
+		background-color: #FDF3DD;
+		margin: 0;
+		padding: 0;
+		color: #F18018;
+	}
+
+	.welcome-content-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 0;
+		max-width: 800px;
+		margin: 0 auto;
+
+	}
+
+	.welcome-title {
+		font-size: 9vw;
+		margin-bottom: 20px;
+	}
+
+	.welcome-background-pic {
+		margin-bottom: 30px;
+		width: 60vw;
+		height: auto;
+	}
+
+	.welcome-copycontent {
+		display: flex;
+		flex-direction: column;
+		align-items: left;
+	}
+
+	.welcome-subtitle {
+		font-size: 6vw;
+		text-align: left;
+	}
+
+	.welcome-para {
+		font-size: 4vw;
+		width: 60vw;
+		text-align: left;
+	}
+
+	.welcome-Start-button {
+		display: inline-block;
+		background-color: #CF4437;
+		color: white;
+		padding: 10px 28px;
+		border-radius: 40px;
+		font-size: 4vw;
+		transition: transform 0.3s ease;
+		text-decoration: none;
+		margin-bottom: 40px;
+		margin-top: 20px;
+		width: 15vw;
+	}
+
+	.welcome-Start-button:hover {
+		transform: scale(1.1);
+	}
+}
+
+
+@media screen and (min-width: 768px) {
+	* {
+		box-sizing: border-box;
+	}
+
+	.welcome-content-container {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+		margin-left: 7vw;
+		font-weight: 400;
+		max-width: 100%;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	.welcome-title {
+		flex-basis: 100%;
+		font-size: 4vw;
+		margin: 0px;
+		text-align: left;
+	}
+
+	.welcome-main-content {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-starts;
+		justify-content: center;
+		gap: 7vw;
+	}
+
+	.welcome-background-pic {
+		width: 40vw;
+		margin-right: 20px;
+		max-width: 100%;
+		height: auto;
+		object-fit: contain;
+	}
+
+	.welcome-copycontent {
+		width: 30vw;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		text-align: left;
+		margin-left: 30px;
+	}
+
+	.welcome-subtitle {
+		font-size: 2.5svw;
+		text-align: left;
+		margin-bottom: 0;
+
+	}
+
+	.welcome-para {
+		font-size: 2vw;
+		text-align: left;
+		width: 100%;
+		word-wrap: break-word;
+	}
+
+	.welcome-Start-button {
+		display: inline-block;
+		background-color: #CF4437;
+		color: white;
+		padding: 10px 28px;
+		border-radius: 40px;
+		font-size: 2vw;
+		transition: transform 0.3s ease;
+		text-decoration: none;
+		margin-bottom: 40px;
+		margin-top: 20px;
+		width: fit-content;
+		border: none;
+		outline: none;
+	}
+
+	.welcome-Start-button:hover {
+		transform: scale(1.1);
+	}
+}
