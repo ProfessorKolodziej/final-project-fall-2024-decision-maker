@@ -19,23 +19,23 @@ function initWheel() {
 	const wheel = document.getElementById("wheel");
 	const sectorAngle = 360 / foods.length;
 
-	// 检测是否为移动端
+
 	const isMobile =
 		window.innerWidth <= 768 ||
 		window.matchMedia("(max-device-width: 768px)").matches;
 
-	// 根据设备类型调整半径
+
 	const wheelSize = isMobile
 		? document.querySelector(".wheel").offsetWidth
 		: 300;
-	const textRadius = isMobile ? wheelSize * 0.32 : 85; // 调整移动端文字距离
+	const textRadius = isMobile ? wheelSize * 0.32 : 85;
 
-	// 调整各种尺寸
+
 	const wheelRadius = isMobile ? wheelSize : 150;
 	const borderWidth = isMobile ? wheelSize * 0.08 : 25;
 	const dotRadius = (wheelSize - borderWidth) / 2;
 
-	// 创建扇形背景
+
 	let gradientString = "";
 	foods.forEach((_, index) => {
 		const startAngle = sectorAngle * index;
@@ -46,7 +46,7 @@ function initWheel() {
 	});
 	wheel.style.background = `conic-gradient(${gradientString})`;
 
-	// 添加文字
+
 	foods.forEach((food, index) => {
 		const text = document.createElement("div");
 		text.className = "sector-text";
@@ -58,7 +58,7 @@ function initWheel() {
 		const x = Math.sin(angleInRadians) * textRadius;
 		const y = -Math.cos(angleInRadians) * textRadius;
 
-		// 设置文字位置和旋转
+
 		text.style.transform = `
       translate(${x}px, ${y}px)
       rotate(${angleInDegrees + 90}deg)`;
@@ -66,7 +66,7 @@ function initWheel() {
 		wheel.appendChild(text);
 	});
 
-	// 圆点位置计算
+
 	const dots = document.createElement("div");
 	dots.className = "dots";
 
@@ -88,7 +88,6 @@ function initWheel() {
 	//document.querySelector(".wheel-container").appendChild(dots);
 }
 
-// 初始化页面时创建转盘
 initWheel();
 
 let isSpinning = false;
@@ -101,35 +100,35 @@ document.getElementById("spinBtn").addEventListener("click", () => {
 	const result = document.getElementById("result");
 	const resultText = document.getElementById("resultText");
 
-	// 清除上一次的结果
+
 	resultText.textContent = "";
 
-	// 先重置转盘位置到0度
+
 	wheel.style.transition = "none";
-	// 使用 style.setProperty 分别设置 transform 属性
+
 	wheel.style.setProperty("transform", "translate(-50%, -50%) rotate(0deg)");
 
-	// 强制浏览器重排
+
 	wheel.offsetHeight;
 
-	// 恢复 transition
+
 	wheel.style.transition = "transform 3s ease-out";
 
-	// 计算扇形角度
+
 	const sectorAngle = 360 / foods.length;
 
-	// 随机选择一个扇形
+
 	const randomSector = Math.floor(Math.random() * foods.length);
 
-	// 计算基础旋转圈数（6-10圈）
+
 	const baseRotations = 4 + Math.floor(Math.random() * 8);
 	const baseRotationDegrees = baseRotations * 360;
 
-	// 计算最终旋转角度，使指针指向选中扇形的中心
+
 	const finalRotation =
 		baseRotationDegrees + randomSector * sectorAngle + sectorAngle / 2;
 
-	// 设置转盘旋转，保持位移
+
 	requestAnimationFrame(() => {
 		wheel.style.setProperty(
 			"transform",
@@ -137,7 +136,7 @@ document.getElementById("spinBtn").addEventListener("click", () => {
 		);
 	});
 
-	// 监听转动完成事件
+
 	wheel.addEventListener(
 		"transitionend",
 		function handleTransitionEnd() {
@@ -157,9 +156,9 @@ document.getElementById("spinBtn").addEventListener("click", () => {
 	);
 });
 
-// 中心轴点击事件也使用相同的逻辑
+
 document.querySelector(".wheel-center").addEventListener("click", () => {
-	// 只有在不旋转时才触发点击事件
+
 	document.getElementById("result").style.display = "none";
 	if (!isSpinning) {
 		document.getElementById("spinBtn").click();
@@ -167,19 +166,19 @@ document.querySelector(".wheel-center").addEventListener("click", () => {
 });
 
 
-// 关闭窗口
+
 document.querySelector(".result-close").addEventListener("click", () => {
-	// 只有在不旋转时才触发点击事件
+
 	document.getElementById("result").style.display = "none";
 });
 
-// 添加窗口大小变化监听
+
 window.addEventListener("resize", () => {
 	const wheel = document.getElementById("wheel");
 	wheel.innerHTML = "";
-	// 移除现有的圆点容器
+
 	const oldDots = document.querySelector(".dots");
 	if (oldDots) oldDots.remove();
-	// 重新初始化
+
 	initWheel();
 });
