@@ -1,12 +1,12 @@
 const foods = [
-	"Pizza",
-	"Pasta",
-	"Salad",
-	"Wrap",
-	"Rice Bowl",
-	"Sandwich",
-	"Sushi",
-	"Fried Rice"
+	"Movies",
+	"Bowling",
+	"Hiking",
+	"Picnic",
+	"Games",
+	"Karaoke",
+	"Reading",
+	"Painting"
 ];
 
 let isSpinning = false;

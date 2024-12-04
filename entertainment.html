@@ -5,18 +5,45 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="Decision Maker Entertainment wheel" content="Decision Maker Entertainment wheel page" />
-	<title>Decision Maker Entertainment wheel</title>
-	<link rel="stylesheet" href="#">
+	<meta name="Decision Maker entertainment wheel" content="Decision Maker entertainment wheel page" />
+	<title>Decision Maker entertainment wheel</title>
+	<link rel="stylesheet" href="css/entertainment.css">
 </head>
 
+<body>
+	<div class="container">
+		<header class="header">
+			<div class="nav-bar">
+				<a href="function.html" class="home-button">
+					<img src="images/home-04.png" alt="home Icon">
+					Home
+				</a>
+				<div class="title">
+					<h1>Wheel of Food</h1>
+				</div>
+			</div>
+		</header>
+		<div class="wheel-container">
+			<div class="pointer"></div>
+			<div class="wheel" id="wheel">
+				<!-- Dividers and text will be added by JavaScript -->
+			</div>
+			<button class="center-button" onclick="spinWheel()"></button>
+		</div>
+		<div class="tips-container">
+			<div class="tips-top">Don't know what to do for entertainment? Try using the wheel to generate a random answer.
+			</div>
+			<div class="tips-bottom">Click on the center bottom spin</div>
+		</div>
+		<div class="modal" id="resultModal">
+			<div class="modal-content">
+				<p id="resultText" style="font-size: 24px;"></p>
+				<button class="close-button" onclick="closeModal()">close</button>
+			</div>
+		</div>
+	</div>
+	<script src="js/entertainment.js"></script>
 
-<body class="Entertainment-body">
-	<main class="Entertainment-content-container">
-		<h1 class="Entertainment-title">Entertainment</h1>
-
-
-	</main>
 </body>
 
 </html>

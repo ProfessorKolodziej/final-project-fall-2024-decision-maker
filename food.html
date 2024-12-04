@@ -7,9 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="Decision Maker food wheel" content="Decision Maker food wheel page" />
 	<title>Decision Maker food wheel</title>
-	<link rel="stylesheet" href="css/food.css">
+	<link rel="stylesheet" href="css/entertainment.css">
 </head>
-
 
 <body>
 	<div class="container">
@@ -24,24 +23,22 @@
 				</div>
 			</div>
 		</header>
-		<main>
-			<div class="wheel-container">
-				<div class="fixed-pointer"></div>
-				<div class="wheel" id="wheel">
-				</div>
-				<!-- 这是一个注释 <img class="wheel-bottom" src="images/bottom.png" alt="The base of the wheel"> -->
-				<div class="wheel-center" id="spinBtn"></div>
+		<div class="wheel-container">
+			<div class="pointer"></div>
+			<div class="wheel" id="wheel">
+				<!-- Dividers and text will be added by JavaScript -->
 			</div>
-			<div class="tips-container">
-				<div class="tips-top">Don't know what to eat? Try using the wheel to generate a random answer.</div>
-				<div class="tips-bottom">Click on the wheel to spin</div>
+			<button class="center-button" onclick="spinWheel()"></button>
+		</div>
+		<div class="tips-container">
+			<div class="tips-top">Don't know what to eat? Try using the wheel to generate a random answer.</div>
+			<div class="tips-bottom">Click on the center bottom spin</div>
+		</div>
+		<div class="modal" id="resultModal">
+			<div class="modal-content">
+				<p id="resultText" style="font-size: 24px;"></p>
+				<button class="close-button" onclick="closeModal()">close</button>
 			</div>
-		</main>
-		<div id="result" class="result">
-			<span class="result-again">Don't like it? Try again.</span>
-			<div id="resultText"></div>
-			<span></span>
-			<img src="images/circle.png" class="result-close" alt="close icon">
 		</div>
 	</div>
 	<script src="js/food.js"></script>
