@@ -45,10 +45,10 @@ function createWheel() {
 		const y = radius * Math.sin((angle - 90) * Math.PI / 180);
 
 		text.style.transform = `
-		 translate(${x}px, ${y}px)
-		 rotate(${angle + 90}deg)
-		 translate(-50%, -50%)
-	  `;
+			translate(${x}px, ${y}px)
+			rotate(${angle + 90}deg)
+			translate(-50%, -50%)
+		`;
 
 		wheel.appendChild(text);
 	});
@@ -95,3 +95,12 @@ function spinWheel() {
 function closeModal() {
 	document.getElementById("resultModal").style.display = "none";
 }
+
+// 使用 addEventListener 绑定事件
+document.addEventListener("DOMContentLoaded", function () {
+	const spinButton = document.querySelector(".center-button");
+	spinButton.addEventListener("click", spinWheel);
+
+	const closeButton = document.querySelector(".close-button");
+	closeButton.addEventListener("click", closeModal);
+});
